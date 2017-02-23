@@ -30,6 +30,14 @@ function visProdukt(produkt) {
 
     klon.querySelector(".data_billede").src = "/img/small/" + produkt.billede + "-sm.jpg";
 
+    if (produkt.udsolgt == false) {
+        // produktet er ikke udsolgt
+        // udsolgttekst skal fjernes
+
+        var udsolgttekst = klon.querySelector(".udsolgttekst");
+        udsolgttekst.parentNode.removeChild(udsolgttekst);
+    }
+
     // append klon til .produkt_liste
 
     document.querySelector(".produktliste").appendChild(klon);
