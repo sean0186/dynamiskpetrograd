@@ -78,13 +78,20 @@
         <div class="container">
             <h1>Forretter</h1>
             <div class="row">
-                <div class="col-lg-4 forret forret1">
-                    <div class="thumbnail modalknap" data-toggle="modal" data-target="#forret1">
-                        <img src="img/medium/ringbroed-druer-md.jpg" alt="forret">
-                        <h4>Russisk ringbrød med vindruer</h4>
-                        <h4>39kr</h4>
+                <template id="produkt_template">
+                    <div class="col-lg-4 forret forret1">
+                        <div class="thumbnail modalknap" data-toggle="modal" data-target="#forret1">
+                            <img src="img/medium/ringbroed-druer-md.jpg" class="img-responsive data_billede" alt="forret">
+                            <h4 class="data_navn">DATA_NAVN</h4>
+                            <h4 class="pris">Pris: <span class="data_pris">DATA_PRIS</span>kr</h4>
+                            <!-- Sæt udsolgt class ved udsolgt -->
+                            <h4 class="rabatpris">Pris: <span class="data_rabatpris">DATA_RABATPRIS</span>kr</h4>
+                            <h4 class="udsolgttekst">Denne ret er desværre udsolgt</h4>
+                            <!-- Skal kun vises ved udsolgt -->
+                        </div>
                     </div>
-                </div>
+                </template>
+
 
                 <div class="col-lg-4 forret forret2">
                     <div class="thumbnail modalknap" data-toggle="modal" data-target="#forret2">
