@@ -10,8 +10,26 @@ function sidenVises() {
 
 function visProduktListe(listen) {
     console.table(listen);
+
+    // giltrer udsolgte produkter fra ...
+    listen = listen.filter(fjernUdsolgte);
+
     listen.forEach(visProdukt);
+
+
 }
+
+function fjernUdsolgte(produkt) {
+    if (produkt.udsolgt == true) {
+        // produktet skal fjernes
+        return false;
+    } else {
+        // produktet skal forblive i listen
+        return true;
+    }
+}
+
+
 
 
 
@@ -46,7 +64,8 @@ function visProdukt(produkt) {
         var rabatpris = klon.querySelector(".rabatpris");
         rabatpris.parentNode.removeChild(rabatpris);
     } else {
-        klon.querySelector(".pris").classList.add("rabat");
+        klon.querySelector(".rabatpris").classList.add("rabat");
+        klon.querySelector(".pris").classList.add("udsolgt");
         // TILFØJ RABAT I CSS
 
     }

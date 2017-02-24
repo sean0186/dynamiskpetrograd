@@ -21,3 +21,12 @@ section {
 .fnutter3 a {
     padding: 0 30px;
 }
+
+.rabat {
+    color: green;
+}
+
+.udsolgt {
+    color: darkred;
+    text-decoration: line-through;
+}
